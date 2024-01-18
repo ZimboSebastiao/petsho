@@ -1,4 +1,5 @@
 import Head from "next/head";
+import styled from "styled-components";
 
 export default function Produtos() {
   return (
@@ -14,9 +15,15 @@ export default function Produtos() {
           content="produtos para animais, alimentos para pets, brinquedos para animais, acessórios pet, loja de animais, pet shop online, qualidade para pets"
         />
       </Head>
-      <section>
+      <styledProduto>
         <h2>Conheça nossos produtos</h2>
-      </section>
+      </styledProduto>
     </>
   );
 }
+
+const styledProduto = styled.section`
+  h2::before {
+    content: "🎁";
+  }
+`;

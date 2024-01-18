@@ -1,4 +1,5 @@
 import Head from "next/head";
+import styled from "styled-components";
 
 export default function Home() {
   return (
@@ -14,9 +15,15 @@ export default function Home() {
           content="pet shop, animais de estimação, cuidados com animais, dicas para pets, notícias pet, promoções pet, bem-estar animal"
         />
       </Head>
-      <section>
+      <styledHome>
         <h2>Pet Notícias</h2>
-      </section>
+      </styledHome>
     </>
   );
 }
+
+const styledHome = styled.section`
+  h2::before {
+    content: "📰";
+  }
+`;

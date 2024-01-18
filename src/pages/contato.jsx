@@ -1,4 +1,5 @@
 import Head from "next/head";
+import styled from "styled-components";
 
 export default function Contato() {
   return (
@@ -14,9 +15,15 @@ export default function Contato() {
           content="contato pet shop, suporte ao cliente, esclarecimento de dúvidas, sugestões para pet shop, serviços para animais, atendimento ao cliente, informações de contato"
         />
       </Head>
-      <section>
+      <styledContato>
         <h2>Fale conosco</h2>
-      </section>
+      </styledContato>
     </>
   );
 }
+
+const styledContato = styled.section`
+  h2::before {
+    content: "💌";
+  }
+`;

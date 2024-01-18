@@ -1,4 +1,5 @@
 import Head from "next/head";
+import styled from "styled-components";
 
 export default function Sobre() {
   return (
@@ -14,9 +15,15 @@ export default function Sobre() {
           content="história do pet shop, compromisso com animais, equipe dedicada, paixão por pets, cuidado animal, qualidade no atendimento, valores do pet shop"
         />
       </Head>
-      <section>
+      <styledSobre>
         <h2>Sobre nosso PetShop</h2>
-      </section>
+      </styledSobre>
     </>
   );
 }
+
+const styledSobre = styled.section`
+  h2::before {
+    content: "💡";
+  }
+`;
