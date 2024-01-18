@@ -1,13 +1,24 @@
 import Link from "next/link";
 import styled from "styled-components";
+import { usePathname } from "next/navigation";
 
 export default function Menu() {
+  const pathname = usePathname();
+  const isActive = (path) => (pathname === path ? "active" : "");
   return (
     <StyledNav>
-      <Link href="/">Blog</Link>
-      <Link href="/produtos">Produtos</Link>
-      <Link href="/sobre">Sobre</Link>
-      <Link href="/contato">Contato</Link>
+      <Link className={isActive("/")} href="/">
+        Blog{" "}
+      </Link>
+      <Link className={isActive("/produtos")} href="/produtos">
+        Produtos
+      </Link>
+      <Link className={isActive("/sobre")} href="/sobre">
+        Sobre
+      </Link>
+      <Link className={isActive("/contato")} href="/contato">
+        Contato
+      </Link>
     </StyledNav>
   );
 }
@@ -16,7 +27,9 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  .active {
+    background-color: red;
+  }
   a {
     text-decoration: none;
     background-color: var(--cor-primaria-fundo);
@@ -36,6 +49,11 @@ const StyledNav = styled.nav`
     &:hover,
     &:focus {
       background-color: var(--cor-primaria-fundo-hover);
+    }
+
+    @media screen and (min-width: 700px) {
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
   }
 `;
