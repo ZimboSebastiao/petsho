@@ -39,4 +39,31 @@ const StyledHeader = styled.header`
     justify-content: center;
     align-items: center;
   }
+
+  img {
+    margin-right: 0.5rem;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+
+  h1 a:hover,
+  h1 a:focus {
+    color: #d17171;
+  }
+
+  @media screen and (min-width: 700px) {
+    div {
+      flex-direction: row;
+    }
+
+    h1 a {
+      font-size: 2rem;
+    }
+  }
 `;
