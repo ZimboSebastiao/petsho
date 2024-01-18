@@ -27,9 +27,7 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  .active {
-    background-color: red;
-  }
+
   a {
     text-decoration: none;
     background-color: var(--cor-primaria-fundo);
@@ -55,5 +53,8 @@ const StyledNav = styled.nav`
       padding-left: 2rem;
       padding-right: 2rem;
     }
+  }
+  a.active {
+    background-color: red;
   }
 `;
