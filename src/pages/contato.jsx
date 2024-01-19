@@ -20,14 +20,14 @@ export default function Contato() {
       <StyledContato>
         <h2>Fale conosco</h2>
         <Container>
-          <div>
+          {/* <div>
             <Image
               src="/images/cat.png"
               width={380}
               height={480}
               alt="Patinha dentro de um coração"
             />
-          </div>
+          </div> */}
           <form action="" method="post">
             <div>
               <input
@@ -77,8 +77,9 @@ const StyledContato = styled.section`
   input {
     box-shadow: var(--sombra-box);
     border-radius: var(--borda-arredondada);
-    padding: 0.5rem;
+    padding: 0.8rem;
   }
+
   textarea {
     box-shadow: var(--sombra-box);
     border-radius: var(--borda-arredondada);

@@ -32,6 +32,19 @@ export default function Home() {
               <p>Subtítulo do post</p>
             </Link>
           </article>
+          <article>
+            <Link href="">
+              <h3>Título do post</h3>
+              <p>Subtítulo do post</p>
+            </Link>
+          </article>
+
+          <article>
+            <Link href="">
+              <h3>Título do post</h3>
+              <p>Subtítulo do post</p>
+            </Link>
+          </article>
         </StyledListaPosts>
       </StyledHome>
     </>
@@ -44,4 +57,38 @@ const StyledHome = styled.section`
   }
 `;
 
-const StyledListaPosts = styled.div``;
+const StyledListaPosts = styled.div`
+  article {
+    background-color: #f7f7f7;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--sombra-box);
+    border-radius: var(--borda-arredondada);
+    transition: transform 200ms;
+
+    & a {
+      text-decoration: none;
+      color: black;
+
+      &:hover,
+      &:focus {
+        color: #2525e0d6;
+      }
+    }
+  }
+
+  article:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+
+  @media screen and (min-width: 500px) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    article {
+      width: 49%;
+    }
+  }
+`;
