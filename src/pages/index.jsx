@@ -22,7 +22,7 @@ export default function Home() {
         <StyledListaPosts>
           {arrayPosts.map((post) => {
             return (
-              <article>
+              <article key={post.id}>
                 <Link href="">
                   <h3>{post.titulo}</h3>
                   <p>{post.subtitulo} </p>
