@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import styled from "styled-components";
 
 export default function Home() {
@@ -17,6 +18,20 @@ export default function Home() {
       </Head>
       <StyledHome>
         <h2>Pet Notícias</h2>
+        <StyledListaPosts>
+          <article>
+            <Link href="">
+              <h3>Título do post</h3>
+              <p>Subtítulo do post</p>
+            </Link>
+          </article>
+          <article>
+            <Link href="">
+              <h3>Título do post</h3>
+              <p>Subtítulo do post</p>
+            </Link>
+          </article>
+        </StyledListaPosts>
       </StyledHome>
     </>
   );
@@ -27,3 +42,5 @@ const StyledHome = styled.section`
     content: "📰 ";
   }
 `;
+
+const StyledListaPosts = styled.div``;
