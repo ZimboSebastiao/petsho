@@ -1,3 +1,4 @@
+import Container from "@/components/ui/Container";
 import Head from "next/head";
 import styled from "styled-components";
 
@@ -17,34 +18,37 @@ export default function Produtos() {
       </Head>
       <StyledProduto>
         <h2>Conheça nossos produtos</h2>
+        <Container>
+          <article>
+            <h3>Banho</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+              delectus dicta voluptate nesciunt cum animi amet quis veniam
+              velit. Magnam labore similique praesentium nulla? Quas id tempora
+              aliquid eaque dolore!
+            </p>
+          </article>
 
-        <article>
-          <h3>Banho</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-            delectus dicta voluptate nesciunt cum animi amet quis veniam velit.
-            Magnam labore similique praesentium nulla? Quas id tempora aliquid
-            eaque dolore!
-          </p>
-        </article>
-        <article>
-          <h3>Castração</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-            delectus dicta voluptate nesciunt cum animi amet quis veniam velit.
-            Magnam labore similique praesentium nulla? Quas id tempora aliquid
-            eaque dolore!
-          </p>
-        </article>
-        <article>
-          <h3>Tosa</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-            delectus dicta voluptate nesciunt cum animi amet quis veniam velit.
-            Magnam labore similique praesentium nulla? Quas id tempora aliquid
-            eaque dolore!
-          </p>
-        </article>
+          <article>
+            <h3>Castração</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+              delectus dicta voluptate nesciunt cum animi amet quis veniam
+              velit. Magnam labore similique praesentium nulla? Quas id tempora
+              aliquid eaque dolore!
+            </p>
+          </article>
+
+          <article>
+            <h3>Tosa</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+              delectus dicta voluptate nesciunt cum animi amet quis veniam
+              velit. Magnam labore similique praesentium nulla? Quas id tempora
+              aliquid eaque dolore!
+            </p>
+          </article>
+        </Container>
       </StyledProduto>
     </>
   );

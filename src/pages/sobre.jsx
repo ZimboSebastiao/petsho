@@ -1,3 +1,4 @@
+import Container from "@/components/ui/Container";
 import Head from "next/head";
 import styled from "styled-components";
 
@@ -18,34 +19,36 @@ export default function Sobre() {
       <StyledSobre>
         <h2>Sobre nosso PetShop</h2>
 
-        <h3>Missão</h3>
+        <Container>
+          <h3>Missão</h3>
 
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
-          necessitatibus rerum dolorum, molestiae id officia? Eveniet
-          repudiandae perferendis animi iste deleniti asperiores nemo voluptatem
-          fuga! Unde repellendus cum earum rerum.
-        </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+            necessitatibus rerum dolorum, molestiae id officia? Eveniet
+            repudiandae perferendis animi iste deleniti asperiores nemo
+            voluptatem fuga! Unde repellendus cum earum rerum.
+          </p>
 
-        <h3>Visão</h3>
+          <h3>Visão</h3>
 
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
-          necessitatibus rerum dolorum, molestiae id officia? Eveniet
-          repudiandae perferendis animi iste deleniti asperiores nemo voluptatem
-          fuga! Unde repellendus cum earum rerum. Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Eligendi officia amet modi natus non
-          alias sapiente fugit, odit nisi voluptatibus?
-        </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+            necessitatibus rerum dolorum, molestiae id officia? Eveniet
+            repudiandae perferendis animi iste deleniti asperiores nemo
+            voluptatem fuga! Unde repellendus cum earum rerum. Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Eligendi officia amet modi
+            natus non alias sapiente fugit, odit nisi voluptatibus?
+          </p>
 
-        <h3>Valores</h3>
+          <h3>Valores</h3>
 
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
-          necessitatibus rerum dolorum, molestiae id officia? Eveniet
-          repudiandae perferendis animi iste deleniti asperiores nemo voluptatem
-          fuga! Unde repellendus cum earum rerum.
-        </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+            necessitatibus rerum dolorum, molestiae id officia? Eveniet
+            repudiandae perferendis animi iste deleniti asperiores nemo
+            voluptatem fuga! Unde repellendus cum earum rerum.
+          </p>
+        </Container>
       </StyledSobre>
     </>
   );
