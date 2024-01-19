@@ -92,5 +92,8 @@ const StyledContato = styled.section`
   }
   form {
     background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
   }
 `;

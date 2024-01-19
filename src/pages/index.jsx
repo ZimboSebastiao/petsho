@@ -25,6 +25,7 @@ export default function Home() {
               <p>Subtítulo do post</p>
             </Link>
           </article>
+
           <article>
             <Link href="">
               <h3>Título do post</h3>
