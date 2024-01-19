@@ -24,6 +24,6 @@ export default function Contato() {
 
 const StyledContato = styled.section`
   h2::before {
-    content: "💌";
+    content: "💌 ";
   }
 `;

@@ -17,6 +17,34 @@ export default function Produtos() {
       </Head>
       <StyledProduto>
         <h2>Conheça nossos produtos</h2>
+
+        <article>
+          <h3>Banho</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+            delectus dicta voluptate nesciunt cum animi amet quis veniam velit.
+            Magnam labore similique praesentium nulla? Quas id tempora aliquid
+            eaque dolore!
+          </p>
+        </article>
+        <article>
+          <h3>Castração</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+            delectus dicta voluptate nesciunt cum animi amet quis veniam velit.
+            Magnam labore similique praesentium nulla? Quas id tempora aliquid
+            eaque dolore!
+          </p>
+        </article>
+        <article>
+          <h3>Tosa</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+            delectus dicta voluptate nesciunt cum animi amet quis veniam velit.
+            Magnam labore similique praesentium nulla? Quas id tempora aliquid
+            eaque dolore!
+          </p>
+        </article>
       </StyledProduto>
     </>
   );
@@ -24,6 +52,6 @@ export default function Produtos() {
 
 const StyledProduto = styled.section`
   h2::before {
-    content: "🎁";
+    content: "🎁 ";
   }
 `;
