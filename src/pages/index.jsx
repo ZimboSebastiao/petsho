@@ -23,10 +23,10 @@ export default function Home() {
           {arrayPosts.map((post) => {
             return (
               <article>
-                <h1>
-                  <Link href="">{post.titulo}</Link>
-                </h1>
-                <Link href="">{post.subtitulo}</Link>
+                <Link href="">
+                  <h3>{post.titulo}</h3>
+                  <p>{post.subtitulo} </p>
+                </Link>
               </article>
             );
           })}
