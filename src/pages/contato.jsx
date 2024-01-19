@@ -89,10 +89,10 @@ const StyledContato = styled.section`
     background-color: #ffa666;
     box-shadow: var(--sombra-box);
     border-radius: var(--borda-arredondada);
-    padding: 0.5rem;
+    padding: 0.7rem;
   }
   form {
-    background-color: blue;
+    /* background-color: blue; */
     display: flex;
     flex-direction: column;
     align-items: start;
