@@ -1,6 +1,7 @@
 import Container from "@/components/ui/Container";
 import Head from "next/head";
 import styled from "styled-components";
+import Image from "next/image";
 
 export default function Contato() {
   return (
@@ -19,20 +20,32 @@ export default function Contato() {
       <StyledContato>
         <h2>Fale conosco</h2>
         <Container>
+          <div>
+            <Image
+              src="/images/cat.png"
+              width={380}
+              height={480}
+              alt="Patinha dentro de um coração"
+            />
+          </div>
           <form action="" method="post">
             <div>
-              <label htmlFor="nome">Nome: </label>
-              <input required type="text" name="id" id="id" />
+              <input
+                placeholder="Nome"
+                required
+                type="text"
+                name="id"
+                id="id"
+              />
             </div>
 
             <div>
-              <label htmlFor="email">E-mail: </label>
-              <input required type="email" />
+              <input placeholder="E-mail" required type="email" />
             </div>
 
             <div>
-              <label htmlFor="mensagem">Mensagem: </label>
               <textarea
+                placeholder="Mensagem"
                 maxLength={500}
                 name="mensagem"
                 id="mensagem"
@@ -54,5 +67,31 @@ export default function Contato() {
 const StyledContato = styled.section`
   h2::before {
     content: "💌 ";
+  }
+  div {
+    padding: 0.6rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  input {
+    box-shadow: var(--sombra-box);
+    border-radius: var(--borda-arredondada);
+    padding: 0.5rem;
+  }
+  textarea {
+    box-shadow: var(--sombra-box);
+    border-radius: var(--borda-arredondada);
+    padding: 0.5rem;
+  }
+  button {
+    background-color: #ffa666;
+    box-shadow: var(--sombra-box);
+    border-radius: var(--borda-arredondada);
+    padding: 0.5rem;
+  }
+  form {
+    background-color: blue;
+    margin-left: auto;
   }
 `;
