@@ -15,14 +15,14 @@ export default function Home() {
           content="pet shop, animais de estimação, cuidados com animais, dicas para pets, notícias pet, promoções pet, bem-estar animal"
         />
       </Head>
-      <styledHome>
+      <StyledHome>
         <h2>Pet Notícias</h2>
-      </styledHome>
+      </StyledHome>
     </>
   );
 }
 
-const styledHome = styled.section`
+const StyledHome = styled.section`
   h2::before {
     content: "📰";
   }

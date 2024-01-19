@@ -15,14 +15,14 @@ export default function Sobre() {
           content="história do pet shop, compromisso com animais, equipe dedicada, paixão por pets, cuidado animal, qualidade no atendimento, valores do pet shop"
         />
       </Head>
-      <styledSobre>
+      <StyledSobre>
         <h2>Sobre nosso PetShop</h2>
-      </styledSobre>
+      </StyledSobre>
     </>
   );
 }
 
-const styledSobre = styled.section`
+const StyledSobre = styled.section`
   h2::before {
     content: "💡";
   }

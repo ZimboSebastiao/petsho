@@ -15,14 +15,14 @@ export default function Produtos() {
           content="produtos para animais, alimentos para pets, brinquedos para animais, acessórios pet, loja de animais, pet shop online, qualidade para pets"
         />
       </Head>
-      <styledProduto>
+      <StyledProduto>
         <h2>Conheça nossos produtos</h2>
-      </styledProduto>
+      </StyledProduto>
     </>
   );
 }
 
-const styledProduto = styled.section`
+const StyledProduto = styled.section`
   h2::before {
     content: "🎁";
   }

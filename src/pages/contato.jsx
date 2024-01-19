@@ -15,14 +15,14 @@ export default function Contato() {
           content="contato pet shop, suporte ao cliente, esclarecimento de dúvidas, sugestões para pet shop, serviços para animais, atendimento ao cliente, informações de contato"
         />
       </Head>
-      <styledContato>
+      <StyledContato>
         <h2>Fale conosco</h2>
-      </styledContato>
+      </StyledContato>
     </>
   );
 }
 
-const styledContato = styled.section`
+const StyledContato = styled.section`
   h2::before {
     content: "💌";
   }
