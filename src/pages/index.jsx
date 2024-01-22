@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import styled from "styled-components";
-import arrayPosts from "./api/array-posts";
 import ListaPosts from "@/components/ListaPosts";
 import { Inter } from "next/font/google";
 
