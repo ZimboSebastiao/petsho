@@ -17,7 +17,6 @@ export default function Home() {
         console.log(dados);
       } catch (error) {
         console.error("Erro ao carregar Posts: " + error);
-        const dados = await resposta.json();
       }
     };
     carregarPosts();
