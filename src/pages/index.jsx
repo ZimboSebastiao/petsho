@@ -14,7 +14,7 @@ export default function Home() {
         const resposta = await fetch(`http://localhost:5000/posts`);
         const dados = await resposta.json();
         setPosts(dados);
-        console.log(dados);
+        // console.log(dados);
       } catch (error) {
         console.error("Erro ao carregar Posts: " + error);
       }
