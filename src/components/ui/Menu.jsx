@@ -55,6 +55,6 @@ const StyledNav = styled.nav`
     }
   }
   a.active {
-    background-color: #d17171;
+    background-color: #ffa666;
   }
 `;

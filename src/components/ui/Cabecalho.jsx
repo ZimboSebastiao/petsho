@@ -11,8 +11,8 @@ export default function Cabecalho() {
           <Link href="/">
             <Image
               src="/images/logo.png"
-              width={48}
-              height={48}
+              width={38}
+              height={38}
               alt="Patinha dentro de um coração"
             />
             PetShop
@@ -32,7 +32,7 @@ const StyledHeader = styled.header`
     text-decoration: none;
     color: var(--cor-primaria);
     background-color: var(--cor-primaria-fundo);
-    padding: 0.5rem 1.2rem;
+    padding: 0.5rem 1rem;
     border-radius: var(--borda-arredondada);
     font-size: 1.5rem;
     display: flex;
@@ -60,6 +60,7 @@ const StyledHeader = styled.header`
   @media screen and (min-width: 700px) {
     div {
       flex-direction: row;
+
     }
 
     h1 a {

@@ -1,6 +1,7 @@
 import Container from "@/components/ui/Container";
 import Head from "next/head";
 import styled from "styled-components";
+import ListaProdutos from "@/components/ListaProdutos";
 
 export default function Produtos() {
   return (
@@ -19,35 +20,7 @@ export default function Produtos() {
       <StyledProduto>
         <h2>Conheça nossos produtos</h2>
         <Container>
-          <article>
-            <h3>Banho</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-              delectus dicta voluptate nesciunt cum animi amet quis veniam
-              velit. Magnam labore similique praesentium nulla? Quas id tempora
-              aliquid eaque dolore!
-            </p>
-          </article>
-
-          <article>
-            <h3>Castração</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-              delectus dicta voluptate nesciunt cum animi amet quis veniam
-              velit. Magnam labore similique praesentium nulla? Quas id tempora
-              aliquid eaque dolore!
-            </p>
-          </article>
-
-          <article>
-            <h3>Tosa</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-              delectus dicta voluptate nesciunt cum animi amet quis veniam
-              velit. Magnam labore similique praesentium nulla? Quas id tempora
-              aliquid eaque dolore!
-            </p>
-          </article>
+          <ListaProdutos />
         </Container>
       </StyledProduto>
     </>
@@ -61,13 +34,5 @@ const StyledProduto = styled.section`
 
   article {
     padding: 1rem;
-  }
-
-  @media screen and (min-width: 800px) {
-    // está div é o StyledContainer, mas a formatação só vale para está página
-    div {
-      display: flex;
-      justify-content: space-between;
-    }
   }
 `;
