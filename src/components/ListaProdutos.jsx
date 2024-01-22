@@ -45,9 +45,289 @@ export default function ListaProdutos() {
       img: "/images/tosa.png",
       price: "R$82.20",
     },
+    {
+      title: "Kit Limpeza",
+      img: "/images/kit.png",
+      price: "R$75.50",
+    },
+    {
+      title: "Adeus Bafo",
+      img: "/images/kit-casa.png",
+      price: "R$87.00",
+    },
+    {
+      title: "Ração",
+      img: "/images/food.png",
+      price: "R$50.00",
+    },
+    {
+      title: "Ração",
+      img: "/images/food2.png",
+      price: "R$50.30",
+    },
+    {
+      title: "Saquinho",
+      img: "/images/saquinho.png",
+      price: "R$25.70",
+    },
+    {
+      title: "Cama Pet",
+      img: "/images/cama-pet-envelope.jpg",
+      price: "R$88.00",
+    },
+    {
+      title: "Tapete",
+      img: "/images/tapete-de-alimentacao.jpeg",
+      price: "R$47.50",
+    },
+    {
+      title: "Kit Tossa",
+      img: "/images/tosa.png",
+      price: "R$82.20",
+    },
+    {
+      title: "Kit Limpeza",
+      img: "/images/kit.png",
+      price: "R$75.50",
+    },
+    {
+      title: "Adeus Bafo",
+      img: "/images/kit-casa.png",
+      price: "R$87.00",
+    },
+    {
+      title: "Ração",
+      img: "/images/food.png",
+      price: "R$50.00",
+    },
+    {
+      title: "Ração",
+      img: "/images/food2.png",
+      price: "R$50.30",
+    },
+    {
+      title: "Saquinho",
+      img: "/images/saquinho.png",
+      price: "R$25.70",
+    },
+    {
+      title: "Cama Pet",
+      img: "/images/cama-pet-envelope.jpg",
+      price: "R$88.00",
+    },
+    {
+      title: "Tapete",
+      img: "/images/tapete-de-alimentacao.jpeg",
+      price: "R$47.50",
+    },
+    {
+      title: "Kit Tossa",
+      img: "/images/tosa.png",
+      price: "R$82.20",
+    },
+    {
+      title: "Kit Limpeza",
+      img: "/images/kit.png",
+      price: "R$75.50",
+    },
+    {
+      title: "Adeus Bafo",
+      img: "/images/kit-casa.png",
+      price: "R$87.00",
+    },
+    {
+      title: "Ração",
+      img: "/images/food.png",
+      price: "R$50.00",
+    },
+    {
+      title: "Ração",
+      img: "/images/food2.png",
+      price: "R$50.30",
+    },
+    {
+      title: "Saquinho",
+      img: "/images/saquinho.png",
+      price: "R$25.70",
+    },
+    {
+      title: "Cama Pet",
+      img: "/images/cama-pet-envelope.jpg",
+      price: "R$88.00",
+    },
+    {
+      title: "Tapete",
+      img: "/images/tapete-de-alimentacao.jpeg",
+      price: "R$47.50",
+    },
+    {
+      title: "Kit Tossa",
+      img: "/images/tosa.png",
+      price: "R$82.20",
+    },
+    {
+      title: "Kit Limpeza",
+      img: "/images/kit.png",
+      price: "R$75.50",
+    },
+    {
+      title: "Adeus Bafo",
+      img: "/images/kit-casa.png",
+      price: "R$87.00",
+    },
+    {
+      title: "Ração",
+      img: "/images/food.png",
+      price: "R$50.00",
+    },
+    {
+      title: "Ração",
+      img: "/images/food2.png",
+      price: "R$50.30",
+    },
+    {
+      title: "Saquinho",
+      img: "/images/saquinho.png",
+      price: "R$25.70",
+    },
+    {
+      title: "Cama Pet",
+      img: "/images/cama-pet-envelope.jpg",
+      price: "R$88.00",
+    },
+    {
+      title: "Tapete",
+      img: "/images/tapete-de-alimentacao.jpeg",
+      price: "R$47.50",
+    },
+    {
+      title: "Kit Tossa",
+      img: "/images/tosa.png",
+      price: "R$82.20",
+    },
+    {
+      title: "Kit Limpeza",
+      img: "/images/kit.png",
+      price: "R$75.50",
+    },
+    {
+      title: "Adeus Bafo",
+      img: "/images/kit-casa.png",
+      price: "R$87.00",
+    },
+    {
+      title: "Ração",
+      img: "/images/food.png",
+      price: "R$50.00",
+    },
+    {
+      title: "Ração",
+      img: "/images/food2.png",
+      price: "R$50.30",
+    },
+    {
+      title: "Saquinho",
+      img: "/images/saquinho.png",
+      price: "R$25.70",
+    },
+    {
+      title: "Cama Pet",
+      img: "/images/cama-pet-envelope.jpg",
+      price: "R$88.00",
+    },
+    {
+      title: "Tapete",
+      img: "/images/tapete-de-alimentacao.jpeg",
+      price: "R$47.50",
+    },
+    {
+      title: "Kit Tossa",
+      img: "/images/tosa.png",
+      price: "R$82.20",
+    },
+    {
+      title: "Kit Limpeza",
+      img: "/images/kit.png",
+      price: "R$75.50",
+    },
+    {
+      title: "Adeus Bafo",
+      img: "/images/kit-casa.png",
+      price: "R$87.00",
+    },
+    {
+      title: "Ração",
+      img: "/images/food.png",
+      price: "R$50.00",
+    },
+    {
+      title: "Ração",
+      img: "/images/food2.png",
+      price: "R$50.30",
+    },
+    {
+      title: "Saquinho",
+      img: "/images/saquinho.png",
+      price: "R$25.70",
+    },
+    {
+      title: "Cama Pet",
+      img: "/images/cama-pet-envelope.jpg",
+      price: "R$88.00",
+    },
+    {
+      title: "Tapete",
+      img: "/images/tapete-de-alimentacao.jpeg",
+      price: "R$47.50",
+    },
+    {
+      title: "Kit Tossa",
+      img: "/images/tosa.png",
+      price: "R$82.20",
+    },
+    {
+      title: "Kit Limpeza",
+      img: "/images/kit.png",
+      price: "R$75.50",
+    },
+    {
+      title: "Adeus Bafo",
+      img: "/images/kit-casa.png",
+      price: "R$87.00",
+    },
+    {
+      title: "Ração",
+      img: "/images/food.png",
+      price: "R$50.00",
+    },
+    {
+      title: "Ração",
+      img: "/images/food2.png",
+      price: "R$50.30",
+    },
+    {
+      title: "Saquinho",
+      img: "/images/saquinho.png",
+      price: "R$25.70",
+    },
+    {
+      title: "Cama Pet",
+      img: "/images/cama-pet-envelope.jpg",
+      price: "R$88.00",
+    },
+    {
+      title: "Tapete",
+      img: "/images/tapete-de-alimentacao.jpeg",
+      price: "R$47.50",
+    },
+    {
+      title: "Kit Tossa",
+      img: "/images/tosa.png",
+      price: "R$82.20",
+    },
   ];
 
-  const itensPorPagina = 4; // Número de itens por página
+  const itensPorPagina = 16; // Número de itens por página
 
   // Calcular o número total de páginas
   const totalPaginas = Math.ceil(list.length / itensPorPagina);
