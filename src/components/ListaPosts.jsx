@@ -2,6 +2,11 @@ import styled from "styled-components";
 import Link from "next/link";
 
 export default function ListaPosts({ posts }) {
+  // Se não houver posts (se estiver vazio), retorne essa condicional
+  if (posts.length === 0)
+    return (
+      <h3 style={{ textAlign: "center", color: "red" }}>Ainda não há posts!</h3>
+    );
   return (
     <StyledListaPosts>
       {posts.map((post) => {

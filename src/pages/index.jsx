@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
       <StyledHome>
         <h2>Pet Notícias</h2>
-        <ListaPosts posts={[{ id: 1, titulo: "teste", subtitulo: "teste" }]} />
+        <ListaPosts posts={[]} />
       </StyledHome>
     </>
   );
