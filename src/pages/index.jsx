@@ -12,9 +12,13 @@ export default function Home() {
     const carregarPosts = async () => {
       try {
         const resposta = await fetch(`http://localhost:5000/posts`);
+        if (!resposta.ok) {
+          throw new Error(
+            `erro requisição: ${resposta.status} - ${resposta.statusText}`
+          );
+        }
         const dados = await resposta.json();
         setPosts(dados);
-        // console.log(dados);
       } catch (error) {
         console.error("Erro ao carregar Posts: " + error);
       }
