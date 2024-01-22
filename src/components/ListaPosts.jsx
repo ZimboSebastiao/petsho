@@ -7,6 +7,7 @@ export default function ListaPosts({ posts }) {
     return (
       <h3 style={{ textAlign: "center", color: "red" }}>Ainda não há posts!</h3>
     );
+
   return (
     <StyledListaPosts>
       {posts.map((post) => {

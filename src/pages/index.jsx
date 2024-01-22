@@ -2,9 +2,27 @@ import Head from "next/head";
 import Link from "next/link";
 import styled from "styled-components";
 import ListaPosts from "@/components/ListaPosts";
+import { useEffect, useState } from "react";
 import { Inter } from "next/font/google";
 
 export default function Home() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const carregarPosts = async () => {
+      try {
+        const resposta = await fetch(`http://localhost:5000/posts`);
+        const dados = await resposta.json();
+        setPosts(dados);
+        console.log(dados);
+      } catch (error) {
+        console.error("Erro ao carregar Posts: " + error);
+        const dados = await resposta.json();
+      }
+    };
+    carregarPosts();
+  }, []);
+
   return (
     <>
       <Head>
@@ -20,7 +38,8 @@ export default function Home() {
       </Head>
       <StyledHome>
         <h2>Pet Notícias</h2>
-        <ListaPosts posts={[]} />
+
+        <ListaPosts key={posts.id} posts={posts} />
       </StyledHome>
     </>
   );
