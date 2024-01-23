@@ -4,26 +4,27 @@ import styled from "styled-components";
 import ListaPosts from "@/components/ListaPosts";
 import { useEffect, useState } from "react";
 
-export default function Home() {
-  const [posts, setPosts] = useState([]);
+// Executada do servidor/back-end
+export async function getStaticProps() {
+  try {
+    const resposta = await fetch(`http://10.20.46.22:5000/posts`);
+    const dados = await resposta.json();
+    if (!resposta.ok) {
+      throw new Error(`Error: ${resposta.status} - ${resposta.statusText}`);
+    }
 
-  useEffect(() => {
-    const carregarPosts = async () => {
-      try {
-        const resposta = await fetch(`http://localhost:5000/posts`);
-        if (!resposta.ok) {
-          throw new Error(
-            `erro requisição: ${resposta.status} - ${resposta.statusText}`
-          );
-        }
-        const dados = await resposta.json();
-        setPosts(dados);
-      } catch (error) {
-        console.error("Erro ao carregar Posts: " + error);
-      }
+    return {
+      props: {
+        posts: dados,
+      },
     };
-    carregarPosts();
-  }, []);
+  } catch (error) {
+    console.error("Erro ao carregar dados: " + error.message);
+  }
+}
+
+export default function Home({ posts }) {
+  const [listaPosts, setPosts] = useState(posts);
 
   return (
     <>
@@ -41,7 +42,7 @@ export default function Home() {
       <StyledHome>
         <h2>Pet Notícias</h2>
 
-        <ListaPosts key={posts.id} posts={posts} />
+        <ListaPosts key={listaPosts.id} posts={listaPosts} />
       </StyledHome>
     </>
   );
