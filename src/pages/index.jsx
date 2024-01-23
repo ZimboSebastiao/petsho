@@ -3,7 +3,6 @@ import Link from "next/link";
 import styled from "styled-components";
 import ListaPosts from "@/components/ListaPosts";
 import { useEffect, useState } from "react";
-import { Inter } from "next/font/google";
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
