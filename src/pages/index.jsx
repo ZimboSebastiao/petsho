@@ -5,7 +5,15 @@ import ListaPosts from "@/components/ListaPosts";
 import { useEffect, useState } from "react";
 
 // Executada do servidor/back-end
+
+/* Função getStaticProps
+Utilizada para execução de código server-side (neste caso, fetch na API)
+com o onjetivo de gerar props com dados processados.
+
+*/
 export async function getStaticProps() {
+  console.log("Código de servidor (não aparece no cliente/usuário)");
+
   try {
     const resposta = await fetch(`http://10.20.46.22:5000/posts`);
     const dados = await resposta.json();
