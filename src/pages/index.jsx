@@ -13,7 +13,7 @@ com o onjetivo de gerar props com dados processados.
 
 */
 export async function getStaticProps() {
-  console.log("Código de servidor (não aparece no cliente/usuário)");
+  // console.log("Código de servidor (não aparece no cliente/usuário)");
 
   try {
     const resposta = await fetch(`${serverApi}/posts`);

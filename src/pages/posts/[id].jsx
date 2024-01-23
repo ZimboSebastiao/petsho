@@ -5,7 +5,7 @@ import serverApi from "../api/server";
 
 export async function getStaticProps({ params }) {
   const { id } = params;
-  console.log(id);
+  //   console.log(id);
   try {
     const resposta = await fetch(`${serverApi}/posts/${id}`);
     // const resposta = await fetch(`http://10.20.47.34/posts/${id}`);
@@ -32,10 +32,11 @@ export async function getStaticPaths() {
 }
 
 export default function post({ post }) {
+  const tituloPagina = `${post.titulo} - Petshop`;
   return (
     <>
       <Head>
-        <title>{post.titulo} - Petshop</title>
+        <title>{tituloPagina}</title>
         <meta name="description" content={post.descricao} />
       </Head>
 
