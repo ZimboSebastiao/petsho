@@ -3,6 +3,7 @@ import Link from "next/link";
 import styled from "styled-components";
 import ListaPosts from "@/components/ListaPosts";
 import { useEffect, useState } from "react";
+import serverApi from "./api/server";
 
 // Executada do servidor/back-end
 
@@ -15,7 +16,7 @@ export async function getStaticProps() {
   console.log("Código de servidor (não aparece no cliente/usuário)");
 
   try {
-    const resposta = await fetch(`http://10.20.46.22:5000/posts`);
+    const resposta = await fetch(`${serverApi}/posts`);
     const dados = await resposta.json();
     if (!resposta.ok) {
       throw new Error(`Error: ${resposta.status} - ${resposta.statusText}`);
