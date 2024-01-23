@@ -8,6 +8,7 @@ export async function getStaticProps({ params }) {
   console.log(id);
   try {
     const resposta = await fetch(`${serverApi}/posts/${id}`);
+    // const resposta = await fetch(`http://10.20.47.34/posts/${id}`);
     if (!resposta.ok) {
       throw new Error(`Error: ${resposta.status} - ${resposta.statusText}`);
     }
@@ -30,20 +31,20 @@ export async function getStaticPaths() {
   };
 }
 
-export default function post() {
+export default function post({ post }) {
   return (
     <>
       <Head>
-        <title>Titulo - Petshop</title>
-        <meta name="description" content="Descrição do post" />
+        <title>{post.titulo} - Petshop</title>
+        <meta name="description" content={post.descricao} />
       </Head>
 
       <StyledPost>
-        <h2>titulo do post</h2>
+        <h2>{post.titulo}</h2>
 
         <Container>
-          <h3>Categoria do post</h3>
-          <p>Descriçaõ do post</p>
+          <h3>{post.categoria}</h3>
+          <p>{post.descricao}</p>
         </Container>
       </StyledPost>
     </>
