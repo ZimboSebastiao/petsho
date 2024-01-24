@@ -33,6 +33,9 @@ export async function getStaticProps() {
     };
   } catch (error) {
     console.error("Erro ao carregar dados: " + error.message);
+    return {
+      notFound: true,
+    };
   }
 }
 

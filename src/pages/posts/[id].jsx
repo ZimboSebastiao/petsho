@@ -21,6 +21,9 @@ export async function getStaticProps({ params }) {
     };
   } catch (error) {
     console.error("Erro ao carregar dados: " + error.message);
+    return {
+      notFound: true,
+    };
   }
 }
 
