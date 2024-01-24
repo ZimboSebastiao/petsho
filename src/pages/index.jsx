@@ -14,12 +14,13 @@ export async function getStaticProps() {
     }
 
     const categorias = dados.map((post) => post.categoria);
-    console.log(categorias);
+
+    const categoriaUnicas = [...new Set(categorias)];
 
     return {
       props: {
         posts: dados,
-        categorias: [],
+        categorias: categoriaUnicas,
       },
     };
   } catch (error) {
@@ -31,6 +32,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts, categorias }) {
+  console.log(categorias);
   const [listaPosts, setPosts] = useState(posts);
 
   return (
