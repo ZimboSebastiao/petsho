@@ -5,16 +5,7 @@ import ListaPosts from "@/components/ListaPosts";
 import { useEffect, useState } from "react";
 import serverApi from "./api/server";
 
-// Executada do servidor/back-end
-
-/* Função getStaticProps
-Utilizada para execução de código server-side (neste caso, fetch na API)
-com o onjetivo de gerar props com dados processados.
-
-*/
 export async function getStaticProps() {
-  // console.log("Código de servidor (não aparece no cliente/usuário)");
-
   try {
     const resposta = await fetch(`${serverApi}/posts`);
     const dados = await resposta.json();
@@ -22,13 +13,13 @@ export async function getStaticProps() {
       throw new Error(`Error: ${resposta.status} - ${resposta.statusText}`);
     }
 
-    /*Após o processamento (desde que não haja erros), a getStaticProps retorna 
-    um objeto com uma propriedade chamada "props", e nesta propriedade colocamos 
-    um objeto com as props que queremos usar. No caso, usamos ima prop chamada 
-    "posts" (pode ter qualquer nome) e é nela que colocamos os dados */
+    const categorias = dados.map((post) => post.categoria);
+    console.log(categorias);
+
     return {
       props: {
         posts: dados,
+        categorias: [],
       },
     };
   } catch (error) {
@@ -39,7 +30,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function Home({ posts }) {
+export default function Home({ posts, categorias }) {
   const [listaPosts, setPosts] = useState(posts);
 
   return (
