@@ -38,12 +38,12 @@ export default function Home({ posts, categorias }) {
 
   const filtrar = (event) => {
     const categoriaEscolhida = event.currentTarget.innerText;
-    console.log(categoriaEscolhida);
+    // console.log(categoriaEscolhida);
+    const novaListaPost = posts.filter(
+      (post) => post.categoria == categoriaEscolhida
+    );
+    setPosts(novaListaPost);
   };
-
-  // const categoriaFiltradas = categorias.filter((fill) => {
-  //   return fill.categoria === categorias || categorias === null;
-  // });
 
   return (
     <>
