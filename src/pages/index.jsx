@@ -43,7 +43,13 @@ export default function Home({ posts, categorias }) {
     const novaListaPost = posts.filter(
       (post) => post.categoria == categoriaEscolhida
     );
+    setFiltroAtivo(true);
     setPosts(novaListaPost);
+  };
+
+  const limparFiltro = () => {
+    setFiltroAtivo(false);
+    setPosts(posts);
   };
 
   return (
@@ -77,7 +83,11 @@ export default function Home({ posts, categorias }) {
             );
           })}
 
-          {filtroAtivo && <Button className="limpar">Limpar filtro</Button>}
+          {filtroAtivo && (
+            <Button onClick={limparFiltro} className="limpar">
+              Limpar filtro
+            </Button>
+          )}
         </StyledCategoria>
 
         <ListaPosts key={listaPosts.id} posts={listaPosts} />
