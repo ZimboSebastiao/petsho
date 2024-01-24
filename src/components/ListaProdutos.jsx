@@ -327,7 +327,7 @@ export default function ListaProdutos() {
     },
   ];
 
-  const itensPorPagina = 16; // Número de itens por página
+  const itensPorPagina = 4; // Número de itens por página
 
   // Calcular o número total de páginas
   const totalPaginas = Math.ceil(list.length / itensPorPagina);
