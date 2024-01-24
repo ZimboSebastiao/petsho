@@ -37,7 +37,7 @@ export default function Home({ posts, categorias }) {
   const [listaPosts, setPosts] = useState(posts);
 
   const filtrar = (event) => {
-    const categoriaEscolhida = event.currentTarget.innerText;
+    const categoriaEscolhida = event.currentTarget.textContent;
     // console.log(categoriaEscolhida);
     const novaListaPost = posts.filter(
       (post) => post.categoria == categoriaEscolhida
@@ -95,4 +95,8 @@ const StyledCategoria = styled.div`
   margin: 1rem 0;
   align-items: center;
   flex-wrap: wrap;
+
+  button {
+    text-transform: capitalize;
+  }
 `;
