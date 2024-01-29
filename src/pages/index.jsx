@@ -34,8 +34,8 @@ export async function getStaticProps() {
 
 export default function Home({ posts, categorias }) {
   const [filtroAtivo, setFiltroAtivo] = useState(false);
-  // console.log(categorias);
   const [listaPosts, setPosts] = useState(posts);
+  const [categoriaAtiva, setCategoriaAtiva] = useState("");
 
   const filtrar = (event) => {
     const categoriaEscolhida = event.currentTarget.textContent;
@@ -45,11 +45,17 @@ export default function Home({ posts, categorias }) {
     );
     setFiltroAtivo(true);
     setPosts(novaListaPost);
+
+    // Sinalizando o state com o texto/categoria escolhida
+    setCategoriaAtiva(categoriaEscolhida);
   };
 
   const limparFiltro = () => {
     setFiltroAtivo(false);
     setPosts(posts);
+
+    // Atualizando o state da actegoria ativa para vazio ""
+    setCategoriaAtiva("");
   };
 
   return (
@@ -76,6 +82,7 @@ export default function Home({ posts, categorias }) {
                 variant="shadow"
                 color="primary"
                 type="button"
+                className={categoria === categoriaAtiva ? "ativo" : ""}
                 onClick={filtrar}
               >
                 {categoria}
@@ -111,6 +118,9 @@ const StyledCategoria = styled.div`
 
   button {
     text-transform: capitalize;
+    &.ativo {
+      background-color: #0a0a33;
+    }
   }
 
   .limpar {
