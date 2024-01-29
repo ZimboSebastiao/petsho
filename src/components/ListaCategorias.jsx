@@ -4,8 +4,8 @@ import { Button } from "@nextui-org/react";
 export default function ListaCategorias({
   categorias,
   categoriaAtiva,
-  filtrar,
-  limparFiltro,
+  onFiltrar,
+  onLimparFiltro,
   filtroAtivo,
 }) {
   return (
@@ -18,7 +18,7 @@ export default function ListaCategorias({
             color="primary"
             type="button"
             className={categoria === categoriaAtiva ? "ativo" : ""}
-            onClick={filtrar}
+            onClick={onFiltrar}
           >
             {categoria}
           </Button>
@@ -26,7 +26,7 @@ export default function ListaCategorias({
       })}
 
       {filtroAtivo && (
-        <Button onClick={limparFiltro} className="limpar">
+        <Button onClick={onLimparFiltro} className="limpar">
           Limpar filtro
         </Button>
       )}
