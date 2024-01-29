@@ -4,6 +4,8 @@
 
 https://nextjs.org/docs/pages/building-your-application/data-fetching
 
+https://petshop-zimbo-default-rtdb.firebaseio.com/
+
 ### Resumo sobre as funções
 
 `getStaticProps`: Executada no lado do servidor (SSR - Server Side Rendiring), portanto logs, erros, lógicas, ações/comandos NÃO aparecem para o usuário (mas aparecem no terminal para o programador/a).
