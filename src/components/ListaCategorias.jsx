@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { useEffect, useState } from "react";
 import { Button } from "@nextui-org/react";
 
 export default function ListaCategorias({
