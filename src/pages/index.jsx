@@ -35,13 +35,13 @@ export async function getStaticProps() {
       };
     });
     console.log(arrayDePosts);
-    const categorias = dados.map((post) => post.categoria);
+    const categorias = arrayDePosts.map((post) => post.categoria);
 
     const categoriaUnicas = [...new Set(categorias)];
 
     return {
       props: {
-        posts: dados,
+        posts: arrayDePosts,
         categorias: categoriaUnicas,
       },
     };

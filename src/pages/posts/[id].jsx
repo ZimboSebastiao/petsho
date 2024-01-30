@@ -7,7 +7,7 @@ export async function getStaticProps({ params }) {
   const { id } = params;
   //   console.log(id);
   try {
-    const resposta = await fetch(`${serverApi}/posts/${id}`);
+    const resposta = await fetch(`${serverApi}/posts/${id}.json`);
     // const resposta = await fetch(`http://10.20.47.34/posts/${id}`);
     if (!resposta.ok) {
       throw new Error(`Error: ${resposta.status} - ${resposta.statusText}`);

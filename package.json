@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "api": "json-server --host 10.20.46.22 db.json --port 5000"
+    "lint": "next lint"
   },
   "dependencies": {
     "@nextui-org/react": "^2.2.9",

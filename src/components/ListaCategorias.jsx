@@ -9,7 +9,7 @@ export default function ListaCategorias({
   filtroAtivo,
 }) {
   return (
-    <StyledCategoria>
+    <StyledCategoria className="gap-4">
       {categorias.map((categoria, index) => {
         return (
           <Button
@@ -36,7 +36,7 @@ export default function ListaCategorias({
 
 const StyledCategoria = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin: 1rem 0;
   align-items: center;
   flex-wrap: wrap;
