@@ -5,9 +5,15 @@ import Image from "next/image";
 import { Input } from "@nextui-org/react";
 import { Textarea } from "@nextui-org/react";
 import { Button, ButtonGroup } from "@nextui-org/react";
+import { useForm } from "react-hook-form";
 
 export default function Contato() {
   const colors = ["primary"];
+
+  const { register, handleSubmit } = useForm();
+  const enviarContato = () => {
+    console.log("Enviando contato...");
+  };
   return (
     <>
       <Head>
@@ -29,6 +35,7 @@ export default function Contato() {
             <div className="flex w-full flex-wrap md:flex-nowrap gap-4">
               {colors.map((color) => (
                 <Input
+                  {...register("nome")}
                   key={color}
                   color={color}
                   required
@@ -40,13 +47,24 @@ export default function Contato() {
 
             <div className="flex w-full flex-wrap md:flex-nowrap gap-4">
               {colors.map((color) => (
-                <Input key={color} color={color} type="email" label="Email" />
+                <Input
+                  {...register("email")}
+                  key={color}
+                  color={color}
+                  type="email"
+                  label="Email"
+                />
               ))}
             </div>
 
             <div className="flex w-full flex-wrap md:flex-nowrap gap-4">
               {colors.map((color) => (
-                <Textarea key={color} color={color} label="Descrição" />
+                <Textarea
+                  {...register("mensagem")}
+                  key={color}
+                  color={color}
+                  label="Mensagem"
+                />
               ))}
             </div>
 
