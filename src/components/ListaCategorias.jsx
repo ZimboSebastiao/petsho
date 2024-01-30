@@ -53,9 +53,9 @@ const StyledCategoria = styled.div`
   }
 
   .limpar {
-    background-color: gray;
+    background-color: #ab1212;
     &:hover {
-      background-color: slategray;
+      background-color: #ff1900;
     }
     &::before {
       content: " 🧹";
