@@ -6,6 +6,14 @@ https://nextjs.org/docs/pages/building-your-application/data-fetching
 
 https://petshop-zimbo-default-rtdb.firebaseio.com/
 
+### Firebase
+
+Firebase é uma plataforma de serviços web (Web services) com uma série de funcionalidades de back-end úteis para aplicações (Web, apps, jogos).
+
+No caso do Petshop, criamos um projeto Firebase e nele adicionamos um banco de dados chamado "Firebase Realtime Database" para utilização como API JSON.
+
+O Realtime Database é um banco de dados `NoSQL`, ou seja, um banco de dados **não-relacional**. Ele é baseado em documentos no formato JSON contendo objetos de dados.
+
 ### Resumo sobre as funções
 
 `getStaticProps`: Executada no lado do servidor (SSR - Server Side Rendiring), portanto logs, erros, lógicas, ações/comandos NÃO aparecem para o usuário (mas aparecem no terminal para o programador/a).
