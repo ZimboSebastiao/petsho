@@ -6,13 +6,32 @@ import { Input } from "@nextui-org/react";
 import { Textarea } from "@nextui-org/react";
 import { Button, ButtonGroup } from "@nextui-org/react";
 import { useForm } from "react-hook-form";
+import serverApi from "./api/server";
+import { useRouter } from "next/router";
 
 export default function Contato() {
   const colors = ["primary"];
 
+  let router = useRouter();
+
   const { register, handleSubmit } = useForm();
-  const enviarContato = () => {
-    console.log("Enviando contato...");
+  const enviarContato = async (dados) => {
+    const { nome, email, mensagem } = dados;
+    const opcoes = {
+      method: "POST",
+      body: JSON.stringify({ nome, email, mensagem }),
+      headers: {
+        "Content-type": "application/json; charset-UTF-8",
+      },
+    };
+
+    try {
+      await fetch(`${serverApi}/contatos.json`, opcoes);
+      alert("Dados enviados");
+      router.push("/");
+    } catch (error) {
+      console.error("Erro ao enviar formulário: " + error.message);
+    }
   };
   return (
     <>
@@ -31,7 +50,13 @@ export default function Contato() {
         <h2>Fale conosco</h2>
         <Container>
           <div className="imagem-fundo"></div>
-          <form action="" method="post">
+          <form
+            action=""
+            method="post"
+            onSubmit={handleSubmit((dados) => {
+              enviarContato(dados);
+            })}
+          >
             <div className="flex w-full flex-wrap md:flex-nowrap gap-4">
               {colors.map((color) => (
                 <Input
@@ -51,6 +76,7 @@ export default function Contato() {
                   {...register("email")}
                   key={color}
                   color={color}
+                  required
                   type="email"
                   label="Email"
                 />
@@ -63,6 +89,7 @@ export default function Contato() {
                   {...register("mensagem")}
                   key={color}
                   color={color}
+                  required
                   label="Mensagem"
                 />
               ))}
@@ -88,7 +115,7 @@ const StyledContato = styled.section`
     content: "💌 ";
   }
   div {
-    padding: 0.6rem;
+    padding: 0.3rem;
     display: flex;
     justify-content: center;
     align-items: flex-start;
