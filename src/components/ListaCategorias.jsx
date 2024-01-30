@@ -43,8 +43,12 @@ const StyledCategoria = styled.div`
 
   button {
     text-transform: capitalize;
+
+    background-color: var(--cor-secundaria-fundo);
+    color: #f7f7f7;
+
     &.ativo {
-      background-color: #0a0a33;
+      background-color: #1515a2;
     }
   }
 
