@@ -14,7 +14,7 @@ https://petshop-zimbo-default-rtdb.firebaseio.com/
 
 1. Arquivo de manifesto
    Arquivo chamado `manifest.json` com informações gerais sobre o aplicativo: nome, descrição, ícones, cores etc.
-   No caso do Next.js este arquivo deve ser colocado na pasta `public` e adicionado via meta-tag no arquivo \_document.js
+   No caso do Next.js este arquivo deve ser colocado na pasta `public` e adicionado via `link` na página `_document.js`
 
 2. Criar/Configurar um Service Worker Javascript
 
