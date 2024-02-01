@@ -34,7 +34,7 @@ export async function getStaticProps() {
         id: post,
       };
     });
-    console.log(arrayDePosts);
+    // console.log(arrayDePosts);
     const categorias = arrayDePosts.map((post) => post.categoria);
 
     const categoriaUnicas = [...new Set(categorias)];
